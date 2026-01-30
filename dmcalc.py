@@ -1,3 +1,6 @@
+import numpy
+import scipy
+
 def dmcalc(arraysd):
     """
     Calculate the absolute difference between all distinct pairs
