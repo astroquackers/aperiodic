@@ -3,11 +3,14 @@ def dmcalc(arraysd):
     Calculate the absolute difference between all distinct pairs
     of elements in the input array, excluding self-pairs (i.e., diagonal).
 
-    Parameters:
-        arraysd (array-like): 1D array of numerical values.
+    Input:
+		1D array of numerical values.
 
-    Returns:
-        numpy.ndarray: 1D array of absolute differences between all unique pairs.
+    Return:
+        1D array of absolute differences between all unique pairs.
+
+	References:
+		Used in Kalari et al. (2018, A&A, 618), Kalari et al. (2026, A&A)
     """
 	arr = np.array(arraysd)
     	# Create a 2D array of absolute differences between every pair
