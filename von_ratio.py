@@ -10,51 +10,7 @@ def compute_von_neumann_ratio(data, alpha, verbose=False):
     distributed.
 
     Parameters
-    ----------
-    alpha: float
-        Significance level.
-        This is the probability threshold below which the null hypothesis will
-        be rejected.
-
-    Notes
-    -----
-    Given a series :math:`x_i` of :math:`n` data points, the von-Neumann test
-    statistic is [1]_ [6]_
-
-    .. math::
-
-       v = \frac{\sum_{i=1}^{n-1} (x_{i+1} - x_i)^2}{\sum_{i=1}^n (x_i -
-           \bar{x})^2
-
-    Under the null hypothesis, the mean :math:`\bar{v} = 2` and the variance
-    :math:`\sigma^2_v = \frac{4 (n - 2)}{(n-1)(n+1)}` [3]_.
-
-
-    References
-    ----------
-
-    .. [1] Von Neumann, J. (1941). Distribution of the ratio of the mean square
-       successive difference to the variance. The Annals of Mathematical
-       Statistics, 12(4), 367-395.
-
-    .. [2] The Mean Square Successive Difference
-       J. von Neumann, R. H. Kent, H. R. Bellinson and B. I. Hart
-       The Annals of Mathematical Statistics
-       Vol. 12, No. 2 (Jun., 1941) , pp. 153-162
-       http://www.jstor.org/stable/2235765
-
-    .. [3] Moments of the Ratio of the Mean Square Successive Difference to the
-       Mean Square Difference in Samples From a Normal Universe J. D. Williams
-       The Annals of Mathematical Statistics
-       Vol. 12, No. 2 (Jun., 1941) , pp. 239-241
-       http://www.jstor.org/stable/2235775
-
-    .. [4] Madansky, Albert,
-       Testing for Independence of Observations,
-       In: Prescriptions for Working Statisticians
-       Springer New York
-       10.1007/978-1-4612-3794-5_4
-       http://dx.doi.org/10.1007/978-1-4612-3794-5_4
+    alpha: Significance level.
     """
 
     mean_square_successive_difference = np.power(np.ediff1d(data), 2).mean()
