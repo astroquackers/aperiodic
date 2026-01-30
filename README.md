@@ -1,0 +1,2 @@
+This code in this repository was used to compute the aperiodic variations in light curves presented in Kalari et al. 2018 (A&A, 618), and Kalari et al. (2026, A&A, in press). 
+It contains two scripts, dmcalc.py computes the values need to create dm-dt histogram. von_ratio.py computes the von Neumann ratio. The scripts include readmes, and if further information is needed on running these please contact me at venu.kalari@noirlab.edu
