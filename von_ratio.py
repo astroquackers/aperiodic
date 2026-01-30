@@ -9,14 +9,15 @@ def compute_von_neumann_ratio(data, alpha, verbose=False):
     The null hypothesis is that the data are independent and normally
     distributed.
 
-    Parameters:
-    alpha: Significance level.
+    Input:
+        alpha: Significance level.
 
-    Returns:
-    von neumann ratio
+    Return:
+        von neumann ratio
 
-    References: von Neumann (1941)
-    Used in Kalari et al. (2026, A&A)
+    References: 
+        von Neumann (1941)
+        Used in Kalari et al. (2026, A&A)
     """
 
     mean_square_successive_difference = np.power(np.ediff1d(data), 2).mean()
